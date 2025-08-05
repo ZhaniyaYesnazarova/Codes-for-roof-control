@@ -1,17 +1,19 @@
-#include <HX711_ADC.h>
+#include <HX711_ADC.h> //this library is used for all 
+// operations with load cell. Check it out
 
-
+// Check the pins
 const int HX711_dout = 5; 
 const int HX711_sck = 4; 
 
-HX711_ADC LoadCell(HX711_dout, HX711_sck);
+
+HX711_ADC LoadCell(HX711_dout, HX711_sck); //HX711 constructor
 
 unsigned long t = 0;
 
 void setup() {
   Serial.begin(57600);
   Serial.println();
-  Serial.println("Starting...");
+  Serial.println("Starting");
 
   LoadCell.begin();
   //LoadCell.setReverseOutput(); //uncomment to turn a negative output value to positive
@@ -28,7 +30,7 @@ void setup() {
     Serial.println("Startup is complete");
   }
   while (!LoadCell.update());
-  calibrate(); //start calibration procedure
+  calibrate(); // calibration procedure
 }
 
 void loop() {
@@ -65,7 +67,6 @@ void loop() {
 }
 
 void calibrate() {
-  Serial.println("***");
   Serial.println("Start calibration:");
   Serial.println("Place the load cell an a level stable surface.");
   Serial.println("Remove any load applied to the load cell.");
