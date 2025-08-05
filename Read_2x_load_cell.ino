@@ -2,10 +2,10 @@
 #include <HX711_ADC.h>
 
 // Pins
-const int HX711_dout_1 = 4; // MCU > HX711 no.1 dout pin
-const int HX711_sck_1  = 5; // MCU > HX711 no.1 sck pin
-const int HX711_dout_2 = 6; // MCU > HX711 no.2 dout pin
-const int HX711_sck_2  = 7; // MCU > HX711 no.2 sck pin
+const int HX711_dout_1 = 4; 
+const int HX711_sck_1  = 5; 
+const int HX711_dout_2 = 6; 
+const int HX711_sck_2  = 7; 
 
 // HX711 constructor (dout pin, sck pin)
 HX711_ADC LoadCell_1(HX711_dout_1, HX711_sck_1); // HX711 1
@@ -19,8 +19,8 @@ void setup() {
   Serial.println();
   Serial.println("Starting...");
 
-  float calibrationValue_1 = 696.0; // calibration value load cell 1
-  float calibrationValue_2 = 733.0; // calibration value load cell 2
+  float calibrationValue_1 = 105.0; // calibration value load cell 1
+  float calibrationValue_2 = 143.0; // calibration value load cell 2
 
   LoadCell_1.begin();
   LoadCell_2.begin();
