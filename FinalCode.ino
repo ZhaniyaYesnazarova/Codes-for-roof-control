@@ -30,9 +30,10 @@ int lastButtonState2 = HIGH;
 
 unsigned long currTime = 0;
 
-const int RPWM1 = 13;   
+//linear actuator pins
+const int RPWM1 = 13;    //these are from ibt 2
 const int LPWM1 = 12;
-const int sensorPin1 = A0;
+const int sensorPin1 = A0; // blue feedback wire
 
 const int RPWM2 = 11;    
 const int LPWM2 = 10;
@@ -48,6 +49,7 @@ const float strokeLength = 101.6;
 int max1, min1;
 int max2, min2;
 
+//stepper motor pins - centering platform
 const int stepPin = 9;    
 const int dirPin = 8;   
 const int stepPin2 = 7;   // x axis 
@@ -59,6 +61,7 @@ const int dirPin2 = 6;
 const int y = 4950;  
 const int x = 4500;  
 // HX711 wiring
+// the pins are already soldered to perfboard
 const int HX711_dout_1 = 3;
 const int HX711_sck_1  = 2;
 //second one  short wires load cell 
