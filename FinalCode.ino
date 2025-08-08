@@ -1,7 +1,5 @@
 #include<HX711_ADC.h>
 #include <elapsedMillis.h>
-#include "AccelStepper.h"
-
 elapsedMillis timeElapsed;
 
 int a = 250;
@@ -15,11 +13,6 @@ bool centered = false;
 const int buttonpin = A3;
 const int tarebutton = A1;
 
-#define liftdir A5
-#define liftstep A4
-#define motorInterfaceType 1
-
-AccelStepper stepper = AccelStepper(motorInterfaceType, stepPin, dirPin);
 
 int buttonState = HIGH; 
 int buttonState2 = HIGH;
@@ -31,8 +24,9 @@ int lastButtonState2 = HIGH;
 unsigned long currTime = 0;
 
 //linear actuator pins
-const int RPWM1 = 13;    //these are from ibt 2
-const int LPWM1 = 12;
+// MUST BE PWM PINS ON ARDUINO
+const int RPWM1 = 5;    //these are from ibt 2
+const int LPWM1 = 3;  // 
 const int sensorPin1 = A0; // blue feedback wire
 
 const int RPWM2 = 11;    
@@ -62,10 +56,10 @@ const int y = 4950;
 const int x = 4500;  
 // HX711 wiring
 // the pins are already soldered to perfboard
-const int HX711_dout_1 = 3;
+const int HX711_dout_1 = 12;
 const int HX711_sck_1  = 2;
 //second one  short wires load cell 
-const int HX711_dout_2 = 5;
+const int HX711_dout_2 = 13;
 const int HX711_sck_2  = 4;
 
 HX711_ADC LoadCell_1(HX711_dout_1, HX711_sck_1);
