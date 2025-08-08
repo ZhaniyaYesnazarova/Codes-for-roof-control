@@ -1,8 +1,8 @@
 #include <elapsedMillis.h>
 elapsedMillis timeElapsed;
 
-const int RPWM1 = 13;   
-const int LPWM1 = 12;
+const int RPWM1 = 5;   
+const int LPWM1 = 3;
 const int sensorPin1 = A0;
 
 
