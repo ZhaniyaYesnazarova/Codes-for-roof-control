@@ -2,8 +2,8 @@
 // operations with load cell. Check it out
 
 // Check the pins
-const int HX711_dout = 5; 
-const int HX711_sck = 4; 
+const int HX711_dout = 12 ;  // 13
+const int HX711_sck = 2 ;  // 4
 
 
 HX711_ADC LoadCell(HX711_dout, HX711_sck); //HX711 constructor
