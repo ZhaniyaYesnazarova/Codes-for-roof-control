@@ -1,11 +1,11 @@
 
 #include <HX711_ADC.h>
 
-// Pins
-const int HX711_dout_1 = 4; 
-const int HX711_sck_1  = 5; 
-const int HX711_dout_2 = 6; 
-const int HX711_sck_2  = 7; 
+// check ur pins
+const int HX711_dout_1 = 12; 
+const int HX711_sck_1  = 2; 
+const int HX711_dout_2 = 13; 
+const int HX711_sck_2  = 4; 
 
 // HX711 constructor (dout pin, sck pin)
 HX711_ADC LoadCell_1(HX711_dout_1, HX711_sck_1); // HX711 1
